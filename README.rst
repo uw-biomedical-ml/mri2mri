@@ -2,8 +2,8 @@
 mri2mri
 ===============================
 
-.. image:: https://img.shields.io/travis/saerxiao/mri2mri.svg
-        :target: https://travis-ci.org/saerxiao/mri2mri
+.. image:: https://img.shields.io/travis/uw-biomedical-ml/mri2mri.svg
+        :target: https://travis-ci.org/uw-biomedical-ml/mri2mri
 
 .. image:: https://img.shields.io/pypi/v/mri2mri.svg
         :target: https://pypi.python.org/pypi/mri2mri
@@ -12,7 +12,32 @@ mri2mri
 convert one type of MRI to another
 
 * Free software: 3-clause BSD license
-* Documentation: (COMING SOON!) https://saerxiao.github.io/mri2mri.
+* Documentation: (COMING SOON!) https://uw-biomedical-ml.github.io/mri2mri.
+
+Installation
+------------
+
+To install the software, you will first need to install `pytorch <https://pytorch.org/>`_
+
+Please follow the installation instructions on their website first.
+
+Then, run::
+
+        pip install mri2mri
+
+If you are installing from source, navigate your shell to the top-level source
+directory and run::
+
+        pip install -r requirements.txt
+        pip install .
+
+If you intend to make changes and work on development of MRI2MRI, please
+run::
+
+        pip install -r requirements.txt
+        pip install -r requirements-dev.txt
+        pip install -e .
+
 
 Features
 --------
