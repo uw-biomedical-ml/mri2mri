@@ -1,8 +1,12 @@
 import torch
 import torch.utils.model_zoo
-from .networks import *
+from .networks import define_net, print_network
 
-MODEL_DICT = {'t2w2t1w': ' http://arokem.org/presentations/t2w2t1w_percept-4ba150ef.pth'}
+MODEL_DICT = {
+    't2w2t1w':
+    'http://arokem.org/presentations/t2w2t1w_percept-4ba150ef.pth',
+    't1w2t2w':
+    'http://arokem.org/presentations/t1w2t2w_percept-53951e93.pth'}
 
 class Model():
     def name(self):
@@ -32,5 +36,5 @@ class Model():
         if which_transform not in MODEL_DICT:
             raise NotImplementedError('%s is not supported' % which_transform)
         model_path = MODEL_DICT[which_transform]
-        state_dict = torch.utils.model_zoo.load_url(model_path)	
+        state_dict = torch.utils.model_zoo.load_url(model_path)
         network.load_state_dict(state_dict)
