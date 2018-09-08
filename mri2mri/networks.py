@@ -1,4 +1,5 @@
 ## based on https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix/blob/master/models/networks.py
+
 import torch
 import torch.nn as nn
 from torch.nn import init
@@ -24,7 +25,7 @@ def weights_init_normal(m):
         init.normal(m.weight.data, 0.0, 0.02)
     elif classname.find('BatchNorm2d') != -1:
         init.normal(m.weight.data, 1.0, 0.02)
-        init.constant(m.bias.data, 0.0)    
+        init.constant(m.bias.data, 0.0)
 
 def init_weights(net, init_type='normal'):
     print('initialization method [%s]' % init_type)
