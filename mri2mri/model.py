@@ -15,8 +15,8 @@ class Model():
 
     def initialize(self, opt):
         self.gpu_ids = opt.gpu_ids
-        self.net = define_net(3, 3, opt.which_model, self.gpu_ids)
-        self.load_network(self.net, opt.which_transform)
+        self.net = define_net(3, 3, opt.model, self.gpu_ids)
+        self.load_network(self.net, opt.transform)
 
         if opt.verbose:
             print('---------- Networks initialized -------------')
@@ -33,9 +33,9 @@ class Model():
     def forward(self):
         self.fake_B = self.net(self.real_A)
 
-    def load_network(self, network, which_transform):
-        if which_transform not in MODEL_DICT:
-            raise NotImplementedError('%s is not supported' % which_transform)
-        model_path = MODEL_DICT[which_transform]
+    def load_network(self, network, transform):
+        if transform not in MODEL_DICT:
+            raise NotImplementedError('%s is not supported' % transform)
+        model_path = MODEL_DICT[transform]
         state_dict = torch.utils.model_zoo.load_url(model_path)
         network.load_state_dict(state_dict)

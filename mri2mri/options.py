@@ -9,9 +9,9 @@ class Options():
 
     def initialize(self):
         self.parser.add_argument('--input', type=str, help='path to the input file, should be nii.gz', required=True)
-        self.parser.add_argument('--which_transform', type=str, help='specify which transform. t1w2t2w, t2w2t1w', required=True)
+        self.parser.add_argument('--transform', type=str, help='specify which transform. t1w2t2w, t2w2t1w', required=True)
         self.parser.add_argument('--fineSize', type=int, default=256, help='then crop to this size')
-        self.parser.add_argument('--which_model', type=str, default='unet_256', help='selects model to use for net')
+        self.parser.add_argument('--model', type=str, default='unet_256', help='selects model to use for net')
         self.parser.add_argument('--gpu_ids', type=str, default='-1', help='gpu ids: e.g. 0  0,1,2, 0,2. use -1 for CPU')
         self.parser.add_argument('--output', type=str, default='output', help='name of the output file')
         self.parser.add_argument('--verbose', action='store_true', help='if specified, print more information')

@@ -1,10 +1,10 @@
-.. Packaging Scientific Python documentation master file, created by
-   sphinx-quickstart on Thu Jun 28 12:35:56 2018.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
 
-mri2mri Documentation
-=====================
+MRI2MRI: a neural network for translation between MRI contrasts
+===============================================================
+
+
+For details, please read our `preprint <https://www.biorxiv.org/content/early/2018/03/27/289926>`_
+
 
 .. toctree::
    :maxdepth: 2

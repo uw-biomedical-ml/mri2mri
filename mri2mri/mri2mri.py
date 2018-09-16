@@ -38,7 +38,9 @@ def main():
 
     output = _RGBtoGray(output)
     outputImg = nib.Nifti1Image(output.permute(1,2,0).numpy(), inputVolume.affine)
-    outputfile = "%s.nii.gz" % (opt.output)
+    outputfile = opt.output
+    if not outputfile.endswith("nii.gz"):
+        outputfile = "%s.nii.gz" % (outputfile)
     print('save output as %s' % outputfile)
     nib.save(outputImg, outputfile)
 
