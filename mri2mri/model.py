@@ -8,6 +8,7 @@ MODEL_DICT = {
     't1w2t2w':
     'http://arokem.org/presentations/t1w2t2w_percept-53951e93.pth'}
 
+
 class Model():
     def name(self):
         return 'Model'
@@ -26,7 +27,7 @@ class Model():
         # we need to use single_dataset mode
         input_A = input['A']
         if len(self.gpu_ids) > 0:
-            input_A = input_A.cuda(self.gpu_ids[0], async=True)
+            input_A = input_A.cuda(self.gpu_ids[0], non_blocking=True)
         self.real_A = input_A
 
     def forward(self):

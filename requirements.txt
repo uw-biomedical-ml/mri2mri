@@ -2,3 +2,5 @@
 nibabel
 nilearn
 sklearn
+torch
+torchvision
