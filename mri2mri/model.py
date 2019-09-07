@@ -4,9 +4,9 @@ from .networks import define_net, print_network
 
 MODEL_DICT = {
     't2w2t1w':
-    'http://arokem.org/presentations/t2w2t1w_percept-4ba150ef.pth',
+    'https://digital.lib.washington.edu/researchworks/bitstream/handle/1773/44486/t2w2t1w_percept-4ba150ef.pth',
     't1w2t2w':
-    'http://arokem.org/presentations/t1w2t2w_percept-53951e93.pth'}
+    'https://digital.lib.washington.edu/researchworks/bitstream/handle/1773/44486/t1w2t2w_percept-53951e93.pth'}
 
 
 class Model():
