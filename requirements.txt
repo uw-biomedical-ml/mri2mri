@@ -4,3 +4,4 @@ nilearn
 sklearn
 torch
 torchvision
+scipy

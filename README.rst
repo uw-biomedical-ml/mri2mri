@@ -12,7 +12,7 @@ mri2mri
 convert one type of MRI to another
 
 * Free software: 3-clause BSD license
-* Documentation: (COMING SOON!) https://uw-biomedical-ml.github.io/mri2mri.
+* Documentation: https://uw-biomedical-ml.github.io/mri2mri.
 
 Installation
 ------------
