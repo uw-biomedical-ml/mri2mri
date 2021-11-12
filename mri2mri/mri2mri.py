@@ -6,9 +6,11 @@ from torchvision import transforms
 import scipy.misc
 from .options import Options
 from .model import Model
+from PIL import Image
 
 def _toTensor(nibImg):
-    img = scipy.misc.toimage(nibImg).convert('RGB')
+
+    img = Image.fromarray(nibImg).convert('RGB')     
     img = transforms.ToTensor()(img)
     img = transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))(img)
     img = img.view(1, img.shape[0], img.shape[1], img.shape[2])
